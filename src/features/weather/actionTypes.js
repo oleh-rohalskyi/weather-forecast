@@ -45,10 +45,10 @@ export function fetchWeather(city) {
             .then(
                 response => response.json(),
                 error => {
-                    if (!error && error.message) {
-                        dispatch(requestWeatherFail(error))
+                    if (error && error.message) {
+                        dispatch(requestWeatherFail(error.message))
                     } else {
-                        dispatch(requestWeatherFail({message: "Internal Server Error"}))
+                        dispatch(requestWeatherFail("Something goes wrong!!!"))
                     }
                 }
             )

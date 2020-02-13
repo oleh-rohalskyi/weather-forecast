@@ -3,9 +3,7 @@ import {REQUEST_WEATHER,RECEIVE_WEATHER,REQUEST_WEATHER_FAIL} from './actionType
 const initialState = {
   isFetching: false,
   list: [],
-  error: {
-    message: ""
-  }
+  error: ""
 };
 
 export default (state = initialState, action) => {
