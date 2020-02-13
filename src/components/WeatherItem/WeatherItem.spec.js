@@ -3,17 +3,12 @@ import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import configureStore from 'redux-mock-store';
 import {actionTypes} from '../../features/weather';
-import Wheather from './WeatherList';
+import WeatherList from './WeatherList';
 
 describe('src > components > Weather', () => {
   /* Create mock store with count value */
   const mockStore = configureStore([]);
-  const store = mockStore({
-    count: {
-      value: 6,
-    },
-  });
-
+  
   /* Add jest mock spy to watch for store.dispatch method. See https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname for more info */
   jest.spyOn(store, 'dispatch');
 

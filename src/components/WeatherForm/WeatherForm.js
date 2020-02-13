@@ -13,6 +13,7 @@ const WeatherFrom = ({props}) => {
 
   const handleClick = (e) => {
       e.preventDefault();
+      dispatch(actionTypes.weatherCharterer(actionTypes.CALL_FROM_WEATHER_FORM))
       dispatch(actionTypes.fetchWeather(city))
   }
 

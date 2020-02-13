@@ -1,8 +1,11 @@
-import {REQUEST_WEATHER,RECEIVE_WEATHER} from './actionTypes';
+import {REQUEST_WEATHER,RECEIVE_WEATHER,REQUEST_WEATHER_FAIL} from './actionTypes';
 
 const initialState = {
   isFetching: false,
-  list: []
+  list: [],
+  error: {
+    message: ""
+  }
 };
 
 export default (state = initialState, action) => {
@@ -11,6 +14,8 @@ export default (state = initialState, action) => {
       return {...state, isFetching: true}
     case RECEIVE_WEATHER:
       return {...state, isFetching: false, list: action.list}
+    case REQUEST_WEATHER_FAIL:
+      return {...state, isFetching: false, error: action.error}
     }
     return state
 };
