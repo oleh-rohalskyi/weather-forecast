@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Weather from './components/WeatherList';
-import WeatherForm from './components/WeatherForm';
+import WeatherList from 'components/WeatherList';
+import WeatherForm from 'components/WeatherForm';
 
 import bg from 'media/taxi-design.svg';
 
@@ -11,8 +11,8 @@ const App = () => (
     <div className="weather">
       <h1 className="weather__h1">Hello Sunshine!</h1>
       <h2 className="weather__title">Can you please tell me the weather in Germany?</h2>
-      <weatherControll />
-      <Weather />
+      <WeatherForm />
+      <WeatherList />
     </div>
   </div>
 );

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import {actionTypes} from '../../features/weather';
+import uuidv4 from 'uuid/v4';
 
 import './weather-form.sass';
 
-const WeatherItem = ({props}) => {
+const WeatherFrom = ({props}) => {
   
   const [city, setCity] = useState("");
 
@@ -19,18 +20,17 @@ const WeatherItem = ({props}) => {
     setCity(e.target.value)
   }
 
+  const id = uuidv4();
+
   return (
-    <div className="weather-item">
-      <div className="weather-item__info">
-        <span>{props.dt_txt.replace(" ","     ")}</span>
-      </div>
-      <div className="weather-item__data">
-        <p>temperature {props.temp}</p>
-        <p>feels like temperature {props.feels_like}</p>
-      </div>
-      <div className="weather-item__chip">{props.description}</div>
+    <div>
+      <form className="weather-form">
+        <label className="weather-form__label"  htmlFor={id}>Please enter a city</label>
+        <input className="weather-form__input" type="text" id={id} onChange={handleInputChange}/>
+        <button className="weather-form__submit" onClick={handleClick}>Have a look</button>
+      </form>
     </div>
   );
 };
 
-export default WeatherItem;
+export default WeatherFrom;

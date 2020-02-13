@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
     case REQUEST_WEATHER:
       return {...state, isFetching: true}
     case RECEIVE_WEATHER:
-      return {...state, isFetching: true, list: action.list}
+      return {...state, isFetching: false, list: action.list}
     }
     return state
 };

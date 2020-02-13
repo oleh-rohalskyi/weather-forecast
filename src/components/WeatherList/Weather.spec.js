@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import configureStore from 'redux-mock-store';
 import {actionTypes} from '../../features/weather';
-import Wheather from './Weather';
+import Wheather from './WeatherList';
 
 describe('src > components > Weather', () => {
   /* Create mock store with count value */
