@@ -1,0 +1,26 @@
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.App {
+  padding-bottom: 453px;
+  height: 100vh;
+  &__bg {
+    z-index: 1;
+    position: fixed;
+    width: 709px;
+    height: 692px;
+    display: block;
+    left: calc(100vw - 709px);
+    top: calc(100% - 545px);
+  }
+}
+  
