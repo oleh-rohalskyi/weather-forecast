@@ -1,8 +1,5 @@
 { 
   "compilerOptions": {
-    "baseUrl": "src",
-    "rules": {
-      "jsx-a11y/label-has-associated-control": "off"
-    }
+    "baseUrl": "src"
   }
 }

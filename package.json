@@ -36,7 +36,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fix": "eslint --fix ./src/",
-    "lint": "eslint ./src/"
+    "lint": "eslint ./src/",
+    "upd-snap": "jest --updateSnapshot"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,8 +55,20 @@
     ]
   },
   "jest": {
+    "moduleFileExtensions": ["js","sass"],
+    "modulePaths": ["<rootDir>/src/"],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss|sass)$": "<rootDir>/src/CSSStub.js"
+    },
+    "setupFilesAfterEnv": ["./src/setupTests.js"],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel7-jest"
+    }
+  },
+  "devDependencies": {
+    "babel7-jest": "^1.0.1"
   }
 }

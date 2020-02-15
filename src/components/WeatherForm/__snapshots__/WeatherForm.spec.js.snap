@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src > components > Counter renders without crashing 1`] = `
+exports[`src > components > Weather renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -13,25 +13,31 @@ exports[`src > components > Counter renders without crashing 1`] = `
     }
   }
 >
-  <Counter>
+  <WeatherFrom>
     <div>
-      <div>
-        Counter component
-      </div>
-      <button
-        onClick={[Function]}
-        type="button"
+      <form
+        className="weather-form"
       >
-        Click me!
-      </button>
-      <div>
-        You clicked: 
-        <strong>
-          6
-        </strong>
-         times.
-      </div>
+        <label
+          className="weather-form__label"
+          htmlFor="c80329ba-355a-4209-bdf0-219b444d272f"
+        >
+          Please enter a city
+        </label>
+        <input
+          className="weather-form__input"
+          id="c80329ba-355a-4209-bdf0-219b444d272f"
+          onChange={[Function]}
+          type="text"
+        />
+        <button
+          className="weather-form__submit"
+          onClick={[Function]}
+        >
+          Have a look
+        </button>
+      </form>
     </div>
-  </Counter>
+  </WeatherFrom>
 </Provider>
 `;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src > components > Counter renders without crashing 1`] = `
+exports[`src > components > WeatherList renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -13,25 +13,95 @@ exports[`src > components > Counter renders without crashing 1`] = `
     }
   }
 >
-  <Counter>
+  <WeatherList>
     <div>
-      <div>
-        Counter component
-      </div>
-      <button
-        onClick={[Function]}
-        type="button"
+      <WeatherItem
+        key="0"
+        props={
+          Object {
+            "description": "overcast clouds",
+            "dt_txt": "2020-02-15 12:00:00",
+            "feels_like": 278.81,
+            "temp": 283.47,
+          }
+        }
       >
-        Click me!
-      </button>
-      <div>
-        You clicked: 
-        <strong>
-          6
-        </strong>
-         times.
-      </div>
+        <div
+          className="weather-item"
+        >
+          <div
+            className="weather-item__info"
+          >
+            <span>
+              2020-02-15
+            </span>
+            <span>
+              12:00:00
+            </span>
+          </div>
+          <div
+            className="weather-item__data"
+          >
+            <p>
+              temperature: 
+              283.47
+            </p>
+            <p>
+              feels like temperature: 
+              278.81
+            </p>
+          </div>
+          <div
+            className="weather-item__chip"
+          >
+            overcast clouds
+          </div>
+        </div>
+      </WeatherItem>
+      <WeatherItem
+        key="1"
+        props={
+          Object {
+            "description": "overcast clouds",
+            "dt_txt": "2020-02-15 15:00:00",
+            "feels_like": 279.39,
+            "temp": 283.93,
+          }
+        }
+      >
+        <div
+          className="weather-item"
+        >
+          <div
+            className="weather-item__info"
+          >
+            <span>
+              2020-02-15
+            </span>
+            <span>
+              15:00:00
+            </span>
+          </div>
+          <div
+            className="weather-item__data"
+          >
+            <p>
+              temperature: 
+              283.93
+            </p>
+            <p>
+              feels like temperature: 
+              279.39
+            </p>
+          </div>
+          <div
+            className="weather-item__chip"
+          >
+            overcast clouds
+          </div>
+        </div>
+      </WeatherItem>
     </div>
-  </Counter>
+  </WeatherList>
 </Provider>
 `;

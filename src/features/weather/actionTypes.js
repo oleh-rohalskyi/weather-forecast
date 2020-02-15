@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 
-import {_WEATHER_API_KEY,_WEATHER_COUNTRY,_WEATHER_API_URL} from 'app.config';
+import {_WEATHER_API_KEY,_WEATHER_COUNTRY,_WEATHER_API_URL} from '../../app.config';
 
 export const REQUEST_WEATHER = 'REQUEST_WEATHER';
 export const REQUEST_WEATHER_FAIL = 'REQUEST_WEATHER_FAIL';
