@@ -20,13 +20,13 @@ exports[`src > components > Weather renders without crashing 1`] = `
       >
         <label
           className="weather-form__label"
-          htmlFor="c80329ba-355a-4209-bdf0-219b444d272f"
+          htmlFor="c52140d3-80fd-4b6b-9092-88a9e6aed9a5"
         >
           Please enter a city
         </label>
         <input
           className="weather-form__input"
-          id="c80329ba-355a-4209-bdf0-219b444d272f"
+          id="c52140d3-80fd-4b6b-9092-88a9e6aed9a5"
           onChange={[Function]}
           type="text"
         />
