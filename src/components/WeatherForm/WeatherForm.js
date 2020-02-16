@@ -21,13 +21,11 @@ const WeatherFrom = ({name}) => {
   }
 
   return (
-    <div>
       <form className="weather-form">
         <label className="weather-form__label"  htmlFor={name}>Please enter a city</label>
         <input className="weather-form__input" type="text" id={name} onChange={handleInputChange}/>
         <button className="weather-form__submit" onClick={handleClick}>Have a look</button>
       </form>
-    </div>
   );
 };
 

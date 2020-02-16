@@ -28,9 +28,7 @@ describe('src > components > WeatherForm', () => {
         <WeatherForm name="test-form" />
       </Provider>
     );
-    // wrapper.find('button').simulate("click")
-    // wrapper.debug();
-    // console.log(wrapper)
+    
     expect(wrapper).toMatchSnapshot();
 
   });

@@ -16,30 +16,28 @@ exports[`src > components > WeatherForm renders without crashing 1`] = `
   <WeatherFrom
     name="test-form"
   >
-    <div>
-      <form
-        className="weather-form"
+    <form
+      className="weather-form"
+    >
+      <label
+        className="weather-form__label"
+        htmlFor="test-form"
       >
-        <label
-          className="weather-form__label"
-          htmlFor="test-form"
-        >
-          Please enter a city
-        </label>
-        <input
-          className="weather-form__input"
-          id="test-form"
-          onChange={[Function]}
-          type="text"
-        />
-        <button
-          className="weather-form__submit"
-          onClick={[Function]}
-        >
-          Have a look
-        </button>
-      </form>
-    </div>
+        Please enter a city
+      </label>
+      <input
+        className="weather-form__input"
+        id="test-form"
+        onChange={[Function]}
+        type="text"
+      />
+      <button
+        className="weather-form__submit"
+        onClick={[Function]}
+      >
+        Have a look
+      </button>
+    </form>
   </WeatherFrom>
 </Provider>
 `;
