@@ -5,7 +5,7 @@ exports[`src > components > WeatherForm renders without crashing 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [MockFunction],
+      "dispatch": [Function],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],

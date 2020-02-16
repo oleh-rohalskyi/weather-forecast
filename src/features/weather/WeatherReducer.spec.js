@@ -1,33 +1,38 @@
-import {INCREMENT_COUNTER} from './actionTypes';
-import WeatherReducer from './WeatherReducer';
+import {
+  REQUEST_WEATHER,
+  RECEIVE_WEATHER,
+  REQUEST_WEATHER_FAIL,
+  CALL_FROM_WEATHER_FORM
+} from './actionTypes';
+
+import WeatherReducer, {initialState} from './WeatherReducer';
 
 describe('features > counter > CounterReducer', () => {
   /* All test cases are very simple, since Redux reducers are pure functions */
   it('returns initial state, if non matched action is provided', () => {
-    const initialState = {
-      value: 0,
-    };
 
     const action = {
-      type: 'FOO',
+      type: 'NO_EXISTING_ACTION',
     };
 
     expect(WeatherReducer(initialState, action)).toBe(initialState);
+
   });
-  it(`increments value, if ${INCREMENT_COUNTER} action is provided`, () => {
-    const initialState = {
-      value: 0,
-    };
+
+  it(`set isFetching value, if ${REQUEST_WEATHER} action is provided`, () => {
 
     /* State we expect after action dispatched */
     const expectedState = {
-      value: 1,
-    };
+      isFetching: true,
+      list: [],
+      error: ""
+    }
 
     const action = {
-      type: INCREMENT_COUNTER,
+      type: REQUEST_WEATHER,
     };
 
-    expect(CounterReducer(initialState, action)).toEqual(expectedState); // use `toEqual` matcher instead of `toBe`, since latter assumes object equality
+    expect(WeatherReducer(initialState, action)).toEqual(expectedState); // use `toEqual` matcher instead of `toBe`, since latter assumes object equality
+ 
   });
 });

@@ -11,7 +11,7 @@ exports[`src > components > WeatherItem renders without crashing 1`] = `
     }
   }
 >
-  <div
+  <li
     className="weather-item"
   >
     <div
@@ -41,6 +41,6 @@ exports[`src > components > WeatherItem renders without crashing 1`] = `
     >
       Thunderly
     </div>
-  </div>
+  </li>
 </WeatherItem>
 `;

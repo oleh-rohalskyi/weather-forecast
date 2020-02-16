@@ -6,6 +6,8 @@
   },
   "private": true,
   "dependencies": {
+    "@manaflair/redux-batch": "^1.0.0",
+    "@reduxjs/toolkit": "^1.2.5",
     "cross-fetch": "^3.0.4",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -15,6 +17,7 @@
     "eslint-plugin-fp": "^2.3.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.3",
+    "jest-fetch-mock": "^3.0.1",
     "lint-staged": "^10.0.7",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",

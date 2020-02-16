@@ -1,6 +1,6 @@
 import {REQUEST_WEATHER,RECEIVE_WEATHER,REQUEST_WEATHER_FAIL} from './actionTypes';
 
-const initialState = {
+export const initialState = {
   isFetching: false,
   list: [],
   error: ""

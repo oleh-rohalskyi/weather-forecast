@@ -11,11 +11,11 @@ const WeatherList = () => {
   const weather = useSelector(selectors.getUIWeatherData);
 
   return (
-      <div>
+      <ul className="weather-list">
         {weather.map( (item,key)=>
           <WeatherItem key={key} props={item} />
         )}
-      </div>
+      </ul>
   );
 };
 

@@ -1,6 +1,5 @@
 import fetch from 'cross-fetch';
-
-import {_WEATHER_API_KEY,_WEATHER_COUNTRY,_WEATHER_API_URL} from '../../app.config';
+import config from '../../app.config';
 
 export const REQUEST_WEATHER = 'REQUEST_WEATHER';
 export const REQUEST_WEATHER_FAIL = 'REQUEST_WEATHER_FAIL';
@@ -40,8 +39,8 @@ export function fetchWeather(city) {
     return function (dispatch) {
 
         dispatch(requestWeather(city))
-
-        return fetch(`${_WEATHER_API_URL}?appid=${_WEATHER_API_KEY}&q=${city},${_WEATHER_COUNTRY}`)
+        
+        return fetch(`${config.WEATHER_API_URL}?appid=${config.WEATHER_API_KEY}&q=${city},${config.WEATHER_COUNTRY}`)
             .then(
                 response => response.json(),
                 error => {

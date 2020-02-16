@@ -7,7 +7,7 @@ const WeatherItem = ({props}) => {
   let [date,time] = dt_txt.split(" ");
 
   return (
-    <div className="weather-item">
+    <li className="weather-item">
       <div className="weather-item__info">
         <span>{date}</span>
         <span>{time}</span>
@@ -17,7 +17,7 @@ const WeatherItem = ({props}) => {
         <p>feels like temperature: {feels_like}</p>
       </div>
       <div className="weather-item__chip">{description}</div>
-    </div>
+    </li>
   );
 };
 
