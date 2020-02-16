@@ -16,26 +16,56 @@ exports[`renders without crashing 1`] = `
     <div
       className="App"
     >
-      <Counter>
-        <div>
+      <img
+        alt="background"
+        className="App__bg"
+        src="taxi-design.svg"
+      />
+      <div
+        className="weather"
+      >
+        <h1
+          className="weather__h1"
+        >
+          Hello Sunshine!
+        </h1>
+        <h2
+          className="weather__title"
+        >
+          Can you please tell me the weather in Germany?
+        </h2>
+        <WeatherFrom
+          name="main-form"
+        >
           <div>
-            Counter component
+            <form
+              className="weather-form"
+            >
+              <label
+                className="weather-form__label"
+                htmlFor="main-form"
+              >
+                Please enter a city
+              </label>
+              <input
+                className="weather-form__input"
+                id="main-form"
+                onChange={[Function]}
+                type="text"
+              />
+              <button
+                className="weather-form__submit"
+                onClick={[Function]}
+              >
+                Have a look
+              </button>
+            </form>
           </div>
-          <button
-            onClick={[Function]}
-            type="button"
-          >
-            Click me!
-          </button>
-          <div>
-            You clicked: 
-            <strong>
-              0
-            </strong>
-             times.
-          </div>
-        </div>
-      </Counter>
+        </WeatherFrom>
+        <WeatherList>
+          <div />
+        </WeatherList>
+      </div>
     </div>
   </App>
 </Provider>

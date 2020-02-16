@@ -1,37 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src > components > Counter renders without crashing 1`] = `
-<Provider
-  store={
+exports[`src > components > WeatherItem renders without crashing 1`] = `
+<WeatherItem
+  props={
     Object {
-      "clearActions": [Function],
-      "dispatch": [MockFunction],
-      "getActions": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
+      "description": "Thunderly",
+      "dt_txt": "2020-02-15 12:00:00",
+      "feels_like": "42",
+      "temp": "36.6",
     }
   }
 >
-  <Counter>
-    <div>
-      <div>
-        Counter component
-      </div>
-      <button
-        onClick={[Function]}
-        type="button"
-      >
-        Click me!
-      </button>
-      <div>
-        You clicked: 
-        <strong>
-          6
-        </strong>
-         times.
-      </div>
+  <div
+    className="weather-item"
+  >
+    <div
+      className="weather-item__info"
+    >
+      <span>
+        2020-02-15
+      </span>
+      <span>
+        12:00:00
+      </span>
     </div>
-  </Counter>
-</Provider>
+    <div
+      className="weather-item__data"
+    >
+      <p>
+        temperature: 
+        36.6
+      </p>
+      <p>
+        feels like temperature: 
+        42
+      </p>
+    </div>
+    <div
+      className="weather-item__chip"
+    >
+      Thunderly
+    </div>
+  </div>
+</WeatherItem>
 `;

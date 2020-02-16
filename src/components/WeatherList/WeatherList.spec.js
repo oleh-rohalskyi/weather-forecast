@@ -4,6 +4,7 @@ import { mount } from 'enzyme';
 import configureStore from 'redux-mock-store';
 import WheatherList from './WeatherList';
 
+
 describe('src > components > WeatherList', () => {
 
   const mockUp = [{

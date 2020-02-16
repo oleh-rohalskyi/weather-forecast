@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`src > components > Weather renders without crashing 1`] = `
+exports[`src > components > WeatherForm renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -13,20 +13,22 @@ exports[`src > components > Weather renders without crashing 1`] = `
     }
   }
 >
-  <WeatherFrom>
+  <WeatherFrom
+    name="test-form"
+  >
     <div>
       <form
         className="weather-form"
       >
         <label
           className="weather-form__label"
-          htmlFor="c52140d3-80fd-4b6b-9092-88a9e6aed9a5"
+          htmlFor="test-form"
         >
           Please enter a city
         </label>
         <input
           className="weather-form__input"
-          id="c52140d3-80fd-4b6b-9092-88a9e6aed9a5"
+          id="test-form"
           onChange={[Function]}
           type="text"
         />
