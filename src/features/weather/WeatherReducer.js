@@ -16,5 +16,4 @@ export default (state = initialState, action) => {
       return {...state, isFetching: false, error: action.error}
     default: return state
     }
-    return state
 };
