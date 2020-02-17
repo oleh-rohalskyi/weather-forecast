@@ -1,20 +1,17 @@
 import {
-  REQUEST_WEATHER,
-  RECEIVE_WEATHER,
-  REQUEST_WEATHER_FAIL,
-  CALL_FROM_WEATHER_FORM
+  REQUEST_WEATHER
 } from './actionTypes';
 
 import WeatherReducer, {initialState} from './WeatherReducer';
 
-describe('features > counter > CounterReducer', () => {
-  /* All test cases are very simple, since Redux reducers are pure functions */
+describe('features > counter > WeatherReducer', () => {
+
   it('returns initial state, if non matched action is provided', () => {
 
     const action = {
       type: 'NO_EXISTING_ACTION',
     };
-
+    
     expect(WeatherReducer(initialState, action)).toBe(initialState);
 
   });

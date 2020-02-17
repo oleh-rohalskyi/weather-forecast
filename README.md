@@ -2,17 +2,19 @@
 
 In the project directory, you can run:
 
-- `yarn start`. Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
+- `npm i`. Use it for instal dependensies.
+  
+- `npm run start`. Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
 
-- `yarn test`. Launches the test runner in the interactive watch mode.
+- `npm run run test`. Launches the test runner in the interactive watch mode.
 
-- `yarn build`. Builds the app for production to the `build` folder.
+- `npm run build`. Builds the app for production to the `build` folder.
 
-- `yarn eject`. Exposes content of `react-script` package
+- `npm run eject`. Exposes content of `react-script` package
 
-- `yarn lint`. Lints project files according to eslint rules, see below. Typical use case: continuous integration environments, Travis, CircleCI, etc.
+- `npm run lint`. Lints project files according to eslint rules, see below. Typical use case: continuous integration environments, Travis, CircleCI, etc.
 
-- `yarn fix`. Same as `yarn lint`, but also fixes errors, when possible. Typical use case: local development environment, git hooks.
+- `npm run fix`. Same as `npm run lint`, but also fixes errors, when possible. Typical use case: local development environment, git hooks.
 
 Due to CRA template limitations (we can change only `scripts` and `dependencies` inside generated `package.json`) all confifguration is done by adding config files where possible. Also no `devDependencies` for now, sorry.
 

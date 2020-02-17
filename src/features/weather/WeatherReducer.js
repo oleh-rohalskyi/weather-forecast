@@ -14,6 +14,7 @@ export default (state = initialState, action) => {
       return {...state, isFetching: false, list: action.list, error: null}
     case REQUEST_WEATHER_FAIL:
       return {...state, isFetching: false, error: action.error}
+    default: return state
     }
     return state
 };
