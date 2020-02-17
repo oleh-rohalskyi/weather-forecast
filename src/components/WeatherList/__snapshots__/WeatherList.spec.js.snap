@@ -47,6 +47,7 @@ exports[`src > components > WeatherList renders without crashing 1`] = `
             <p>
               temperature: 
               283.47
+               K
             </p>
             <p>
               feels like temperature: 
@@ -56,7 +57,9 @@ exports[`src > components > WeatherList renders without crashing 1`] = `
           <div
             className="weather-item__chip"
           >
-            overcast clouds
+            <div>
+              overcast clouds
+            </div>
           </div>
         </li>
       </WeatherItem>
@@ -90,6 +93,7 @@ exports[`src > components > WeatherList renders without crashing 1`] = `
             <p>
               temperature: 
               283.93
+               K
             </p>
             <p>
               feels like temperature: 
@@ -99,7 +103,9 @@ exports[`src > components > WeatherList renders without crashing 1`] = `
           <div
             className="weather-item__chip"
           >
-            overcast clouds
+            <div>
+              overcast clouds
+            </div>
           </div>
         </li>
       </WeatherItem>

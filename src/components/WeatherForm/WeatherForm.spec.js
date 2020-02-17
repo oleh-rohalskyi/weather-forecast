@@ -8,19 +8,31 @@ import configureStore from 'redux-mock-store';
 import WeatherForm from './WeatherForm';
 import {actionTypes} from 'features/weather';
 import {fetchWeather} from 'features/weather/actionTypes';
+
+const storeMockUp = {
+  weather: {
+    isFetching: false,
+    list: [],
+    error: "",
+    city: ""
+  }
+}
+
   
 describe('src > components > WeatherForm', () => {
   it('renders without crashing', () => {
     
     let store;
-    const mockUp = {}
     
-    const mockStore = configureStore(mockUp);
+    const mockStore = configureStore(storeMockUp);
     
     store = mockStore({
-      isFetching: false,
-      list: [],
-      error: ""
+      weather: {
+        isFetching: false,
+        list: [],
+        error: "",
+        city: ""
+      }
     });
 
     const wrapper = mount(
@@ -49,12 +61,7 @@ describe('src > components > WeatherForm', () => {
 
     fetch.resetMocks();
 
-    store = mockStore({
-      isFetching: false,
-      list: [],
-      error: "",
-      city: ""
-    });
+    store = mockStore(storeMockUp);
     
     jest.spyOn(store, 'dispatch');
 
@@ -91,19 +98,9 @@ describe('src > components > WeatherForm', () => {
       })
     ];
     
-    store = mockStore({
-      isFetching: false,
-      list: [],
-      error: "",
-      city: ""
-    });
-    
-    
     return (
       store.dispatch(fetchWeather("Berlin")).then(() => {
-        expect(store.getActions()).toEqual(
-          expectedActions
-        );
+        expect(store.getActions()).toEqual(expectedActions);
       })
       );
     });
@@ -116,12 +113,10 @@ describe('src > components > WeatherForm', () => {
           type: actionTypes.REQUEST_WEATHER,
         }),
         expect.objectContaining({
-          error: expect.any(String),
+          error: "city not found",
           type: actionTypes.REQUEST_WEATHER_FAIL
         })
       ];
-
-      const store = mockStore({});
 
       return (
         store.dispatch(fetchWeather("TOKIO 3")).then(() => {

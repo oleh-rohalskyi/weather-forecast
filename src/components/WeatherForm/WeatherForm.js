@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import {useDispatch} from 'react-redux';
-import {actionTypes} from '../../features/weather';
+import {useDispatch,useSelector} from 'react-redux';
+import {selectors,actionTypes} from '../../features/weather';
 
 import './weather-form.sass';
 
@@ -20,9 +20,14 @@ const WeatherFrom = ({name}) => {
     setCity(e.target.value)
   }
 
+  const error = useSelector(selectors.getWeatherError);
+
+  const message = error ? "Please try another city" : "Please enter a city";
+  const labelClass = "weather-form__label" + (error ? " danger" : "");
+  
   return (
       <form className="weather-form">
-        <label className="weather-form__label"  htmlFor={name}>Please enter a city</label>
+        <label className={labelClass}  htmlFor={name}>{message}</label>
         <input className="weather-form__input" type="text" id={name} onChange={handleInputChange}/>
         <button className="weather-form__submit" onClick={handleClick}>Have a look</button>
       </form>

@@ -30,6 +30,7 @@ exports[`src > components > WeatherItem renders without crashing 1`] = `
       <p>
         temperature: 
         36.6
+         K
       </p>
       <p>
         feels like temperature: 
@@ -39,7 +40,9 @@ exports[`src > components > WeatherItem renders without crashing 1`] = `
     <div
       className="weather-item__chip"
     >
-      Thunderly
+      <div>
+        Thunderly
+      </div>
     </div>
   </li>
 </WeatherItem>
