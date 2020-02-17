@@ -105,7 +105,7 @@ describe('src > components > WeatherForm', () => {
       );
     });
     
-    it('Does a getRandomAdvice action when error', () => {
+    it('Does a fetchWeather action when error', () => {
       
       const expectedActions = [
         expect.objectContaining({
