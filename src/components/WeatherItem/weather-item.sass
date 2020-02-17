@@ -1,3 +1,5 @@
+@import values
+
 .weather-item
     width: 325px
     height: 143px
@@ -10,17 +12,25 @@
         font-family: 'Roboto'
         color: #F3997B
         font-size: 12px
+        display: flex
+        & span:first-child 
+            margin-right: auto
+        & span:last-child
+            margin-left: auto 
     &__data
         font-family: 'Roboto'
         color: #114358
         font-size: 16px
         margin-top: 7px
         margin-bottom: 20px
+        line-height: 30px
     &__chip
-        border-radius: 11px
-        background-color: #E6F4F1
-        line-height: 21px
-        text-align: center
-        padding: 4px
-        width: 189px
-        height: 21px
+        display: flex
+        &>div
+            border-radius: 11px
+            background-color: #E6F4F1
+            line-height: 21px
+            text-align: center
+            padding: 4px 19px
+            height: 21px
+    

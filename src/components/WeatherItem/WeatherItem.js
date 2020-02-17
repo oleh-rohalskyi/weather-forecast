@@ -13,10 +13,12 @@ const WeatherItem = ({props}) => {
         <span>{time}</span>
       </div>
       <div className="weather-item__data">
-        <p>temperature: {temp}</p>
+        <p>temperature: {temp} K</p>
         <p>feels like temperature: {feels_like}</p>
       </div>
-      <div className="weather-item__chip">{description}</div>
+      <div className="weather-item__chip">
+        <div>{description}</div>
+      </div>
     </li>
   );
 };

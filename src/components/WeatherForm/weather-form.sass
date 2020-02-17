@@ -1,3 +1,5 @@
+@import values
+
 .weather-form
     &__label
         display: block
@@ -28,4 +30,9 @@
         font-family: 'Roboto'
         letter-spacing: 0
         font-weight: bold
+        margin-bottom: 50px
         color: rgba(255, 255, 255, 1)
+    @media (max-width: $min-size)
+        &__input
+            width: 234px
+            margin: 14px auto 16px auto

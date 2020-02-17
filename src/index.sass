@@ -1,45 +1,72 @@
+@import 'values'
+
 body
   width: 100vw
   margin: 0
   padding: 0
+  overflow-x: hidden
   font-family: sans-serif
+  position: relative
+  background-image: url('media/taxi-design.svg')
+  background-size: 709px 692px
+  background-repeat: no-repeat
+  background-position-x: calc(50vw + 209px)
+  background-position-y: calc(100% - 17px)
+  transition: all .3s
+  @media (max-width: $mid-size) 
+    background-size: 435px 425px
+    background-position-x: calc(50vw + 81px)
+    background-position-y: calc(100% - 65px)
+  @media (max-width: $min-size)
+    background-size: 350px 342px
+    background-position-x: calc(100vw - 320px)
+    background-position-y: calc(100% - 340px)
+
+  #root 
+  width: 100%
 
 *
   margin-block-start: 0
   margin-block-end: 0
 
 .App
-  padding-bottom: 453px
-  height: 100vh
-  &__bg
-    z-index: 1
-    position: fixed
-    width: 709px
-    height: 692px
-    display: block
-    left: calc(100vw - 709px)
-    top: calc(100% - 545px)
+  height: 1080px
+  margin: 0 auto
+  max-width: $mid-size
 
 .weather
-    z-index: 3000
-    position: relative
+    z-index: 3000 
     &__h1 
-        margin-top: 80px
+        margin-top: 70px
         font-family: 'Nunito'
         font-size: 70px
-        letter-spacing: 1
+        letter-spacing: -2px
         text-align: center
         color: #F3997B
         font-weight: bold
     &__title
-        width: 894px
-        height: 129px
         font-size: 70px
-        line-height: 60px
+        line-height: 75px
         text-align: center
         font-family: 'Nunito'
-        letter-spacing: 1 
+        letter-spacing: -2px
         color: #17475B
         margin: 0 auto 50px auto
-
-  
+    @media (max-width: $mid-size) 
+      &__h1
+        margin-top: 80px
+        font-size: 50px
+        line-height: 55px
+      &__title
+        font-size: 50px
+        line-height: 55px
+         margin-bottom: 20px
+    @media (max-width: $min-size) 
+      &__h1
+        margin-top: 40px
+        font-size: 30px
+        line-height: 35px
+      &__title
+        margin-top: 20px
+        font-size: 30px
+        line-height: 35px
